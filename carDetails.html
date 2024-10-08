@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+
+            <!-- meta data -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+            <!--font-family-->
+            <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+            
+            <!-- title of site -->
+            <title>CarVilla</title>
+    
+            <!-- For favicon png -->
+            <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+           
+            <!--font-awesome.min.css-->
+            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+            <!--linear icon css-->
+            <link rel="stylesheet" href="assets/css/linearicons.css">
+    
+            <!--flaticon.css-->
+            <link rel="stylesheet" href="assets/css/flaticon.css">
+    
+            <!--animate.css-->
+            <link rel="stylesheet" href="assets/css/animate.css">
+    
+            <!--owl.carousel.css-->
+            <!-- Owl Carousel CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+            
+            <!--bootstrap.min.css-->
+            
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            
+            <!-- bootsnav -->
+            <link rel="stylesheet" href="assets/css/bootsnav.css" >	
+            
+            <!--style.css-->
+            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="assets/css/carDetails.css">
+
+            
+            <!--responsive.css-->
+            <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    
+            <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Owl Carousel CSS -->
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+        
+    
+        </head>
+        
+        <body>
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            <!--welcome-hero start -->
+            <section id="home" class="welcome-hero">
+    
+                <!-- top-area Start -->
+                <div class="top-area">
+                    <div class="header-area">
+                        <!-- Start Navigation -->
+                        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+                            <div class="container">
+                                <!-- Start Header Navigation -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <a class="navbar-brand" href="index.html">Atlas Car<span></span></a>
+                                </div><!--/.navbar-header-->
+                                <!-- End Header Navigation -->
+                
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                                        <li class=" "><a href="index.html">Home</a></li>
+                                        <li class="scroll"><a href="#service">Service</a></li>
+                                        <li class=""><a href="allCars.html">All Cars</a></li>
+                                        <li class="active"><a href="carDetails.html">Car details</a></li>
+                                        <li><a href="login.html">LogIn</a></li>
+                                    </ul><!--/.nav -->
+                                </div><!-- /.navbar-collapse -->
+                            </div><!--/.container-->
+                        </nav><!--/nav-->
+                        <!-- End Navigation -->
+                    </div><!--/.header-area-->
+                    <div class="clearfix"></div>
+                </div>
+                
+                <!-- Car Details Section -->
+                <div class="containerCarDetails">
+                    
+                    <div class="image-gallery">
+                        <img id="largeImage" src="default-car.jpg" class="large-image" alt="Large Car Image">
+                        <div id="thumbnails" class="thumbnail-images">
+                            <!-- Thumbnails will be injected here -->
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <h2 id="carTitle">Car Make and Model</h2>
+                        <p><span>Year:</span> <span id="carYear">2020</span></p>
+                        <p><span>Style:</span> <span id="carStyle">Sedan</span></p>
+                        <p><span>Condition:</span> <span id="carCondition">New</span></p>
+                        <p><span>Mileage:</span> <span id="carMileage">10,000 mi</span></p>
+                        <p><span>Transmission:</span> <span id="carTransmission">Automatic</span></p>
+                        <p><span>Description:</span> <span id="carDescription">Lorem ipsum dolor sit amet.</span></p>
+                        <p class="price">$<span id="carPrice">50,000</span></p>
+
+                        <div class="social-share">
+                            <p>Share this car:</p>
+                            <button id="shareFacebook" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+                            <button id="shareTwitter" class="btn btn-info"><i class="fa fa-twitter"></i> Twitter</button>
+                            <button id="shareLinkedIn" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</button>
+                            <button id="shareWhatsApp" class="btn btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+                            <button id="shareEmail" class="btn btn-email"><i class="fa fa-envelope"></i> Email</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- /.top-area-DONE-->
+                <!-- top-area End -->
+    
+                  <!-- Modal for Full Screen Image -->
+
+
+                
+            </section><!--/.welcome-hero-->
+            <!--welcome-hero end -->
+	<!--contact start-->
+    <footer id="contact"  class="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">ATLAS CAR</a>
+                            </div>
+                            <p>
+                                Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
+                            </p>
+                            <div class="footer-contact">
+                                <p>info@themesine.com</p>
+                                <p>+1 (123) 1234566789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>about devloon</h2>
+                            <ul>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">career</a></li>
+                                <li><a href="#">terms <span> of service</span></a></li>
+                                <li><a href="#">privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-footer-widget">
+                            <h2>top brands</h2>
+                            <div class="row">
+                                <div class="col-md-7 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">BMW</a></li>
+                                        <li><a href="#">lamborghini</a></li>
+                                        <li><a href="#">camaro</a></li>
+                                        <li><a href="#">audi</a></li>
+                                        <li><a href="#">infiniti</a></li>
+                                        <li><a href="#">nissan</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">ferrari</a></li>
+                                        <li><a href="#">porsche</a></li>
+                                        <li><a href="#">land rover</a></li>
+                                        <li><a href="#">aston martin</a></li>
+                                        <li><a href="#">mersedes</a></li>
+                                        <li><a href="#">opel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>news letter</h2>
+                            <div class="footer-newsletter">
+                                <p>
+                                    Subscribe to get latest news  update and informations
+                                </p>
+                            </div>
+                            <div class="hm-foot-email">
+                                <div class="foot-email-box">
+                                    <input type="text" class="form-control" placeholder="Add Email">
+                                </div><!--/.foot-email-box-->
+                                <div class="foot-email-subscribe">
+                                    <span><i class="fa fa-arrow-right"></i></span>
+                                </div><!--/.foot-email-icon-->
+                            </div><!--/.hm-foot-email-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            &copy; copyright.designed and developed by <a href="">Mohamed Gougue</a>.
+                        </p><!--/p-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>	
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>	
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.footer-copyright-->
+        </div><!--/.container-->
+
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div>
+            
+        </div><!--/.scroll-Top-->
+        
+    </footer><!--/.contact-->
+    <!--contact end-->
+    
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/js/jquery.js"></script>
+
+<!-- Modernizr (for feature detection) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!-- Bootstrap JS (depends on jQuery) -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Bootsnav (depends on jQuery) -->
+<script src="assets/js/bootsnav.js"></script>
+
+<!-- Owl Carousel (depends on jQuery) -->
+<script src="assets/js/owl.carousel.min.js"></script>
+
+<!-- jQuery Easing (depends on jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<script defer type="module" src="assets/js/carDetails.js"></script> <!-- JS file to handle dynamic functionality -->
+
+</body>
+</html>

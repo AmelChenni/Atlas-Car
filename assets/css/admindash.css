@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Use a clean sans-serif font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Admin Dashboard Container */
+#admin-dashboard {
+    max-width: 1200px; /* Max width for the dashboard */
+    margin: 0 auto; /* Center the dashboard */
+    padding: 20px; /* Add some padding */
+}
+
+/* Form Section */
+#form-section {
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the form */
+    margin-bottom: 30px; /* Space below the form */
+}
+
+/* Form Inputs */
+input, select, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Principal Image Section */
+#principal-image-section {
+    border: 2px dashed #4e4ffa; /* Dashed border for emphasis */
+    padding: 15px; /* Inner padding */
+    margin: 20px 0; /* Space above and below */
+    background-color: #e6eaff; /* Light background for distinction */
+}
+
+#principal-image-section h3 {
+    color: #4e4ffa; /* Color for principal image heading */
+}
+
+/* Additional Images Section */
+#additional-images-section {
+    border: 2px dashed #28a745; /* Green dashed border */
+    padding: 15px; /* Inner padding */
+    margin: 20px 0; /* Space above and below */
+    background-color: #e6ffe6; /* Light green background */
+}
+
+#additional-images-section h3 {
+    color: #28a745; /* Color for additional images heading */
+}
+
+/* Video Section */
+#video-section {
+    border: 2px dashed #dc3545; /* Red dashed border */
+    padding: 15px; /* Inner padding */
+    margin: 20px 0; /* Space above and below */
+    background-color: #ffe6e6; /* Light red background */
+}
+
+#video-section h3 {
+    color: #dc3545; /* Color for video heading */
+}
+
+/* Image and Video Containers */
+.car-image-container {
+    /* display: flex; Flex layout for images */
+    align-items: center; /* Center align items */
+    margin-bottom: 10px; /* Space between images */
+}
+
+.car-image-container img {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-right: 10px; /* Space between image and button */
+}
+
+/* Button Styles */
+button {
+    background-color: #4e4ffa; /* Button background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #3a3e6e; /* Darker shade on hover */
+}
+
+/* Alert Messages */
+.swal2-popup {
+    font-size: 16px; /* Larger font for alerts */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    input, select, textarea {
+        font-size: 14px; /* Smaller font size for mobile inputs */
+    }
+}
+/* Separator Style */
+.separator {
+    margin: 20px 0; /* Space above and below the separator */
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex; /* Flex layout for buttons */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Button Styles */
+.action-buttons button {
+    background-color: #dc3545; /* Red for delete button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.action-buttons button:hover {
+    background-color: #c82333; /* Darker shade on hover for delete button */
+}
+
+.action-buttons button:nth-child(2) {
+    background-color: #4e4ffa; /* Blue for update button */
+}
+
+.action-buttons button:nth-child(2):hover {
+    background-color: #3a3e6e; /* Darker shade on hover for update button */
+}

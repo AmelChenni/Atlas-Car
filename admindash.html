@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Atlas Cars</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admindash.css">
+       <!--owl.carousel.css-->
+		<!-- Owl Carousel CSS -->
+          <!--responsive.css-->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css">
+		
+        <!-- <iframe src="https://example.com" sandbox="allow-scripts allow-same-origin allow-popups"></iframe> -->
+
+    <style>
+        /* Custom Admin Styles */
+        .card-custom {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .car-img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Admin Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="admin-dashboard.html">Admin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="adminNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="admin-dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin-cars.html">Manage Cars</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Admin Dashboard Content -->
+<section class="container py-5">
+    <div class="row">
+        <!-- Add New Car Section -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-custom">
+                <div class="card-header bg-primary text-white">Add New Car</div>
+                <div class="card-body" id="form-section">
+                    <form id="addCarForm" class="styled-form">
+                        <!-- Make -->
+                        <div class="form-group">
+                            <label for="carMake">Make:</label>
+                            <select id="carMake" name="carMake" class="form-control" required>
+                                <option value="default">Select Make</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Tesla">Tesla</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Jaguar">Jaguar</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Porsche">Porsche</option>
+                            </select>
+                        </div>
+                    
+                        <!-- Model -->
+                        <div class="form-group">
+                            <label for="carModel">Model:</label>
+                            <input type="text" id="carModel" name="carModel" class="form-control" required>
+                        </div>
+                    
+                        <!-- Year -->
+                        <div class="form-group">
+                            <label for="carYear">Year:</label>
+                            <select id="carYear" class="form-control">
+                                <option value="">Select Year</option>
+                                <!-- Years from 1991 to 2024 -->
+                                <script>
+                                    for (let year = 2024; year >= 1991; year--) {
+                                        document.write(`<option value="${year}">${year}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </div>
+
+                        <!-- Body Style -->
+                        <div class="form-group">
+                            <label for="carStyle">Body Style:</label>
+                            <select id="carStyle" name="carStyle" class="form-control" required>
+                                <option value="default">Select Body Style</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Coupe">Coupe</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Convertible">Convertible</option>
+                                <option value="Pickup">Pickup Truck</option>
+                                <option value="Van">Van</option>
+                                <option value="Wagon">Wagon</option>
+                                <option value="Crossover">Crossover</option>
+                                <option value="Sports Car">Sports Car</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Hybrid">Hybrid</option>
+                                <option value="Microcar">Microcar</option>
+                                <option value="Subcompact">Subcompact</option>
+                                <option value="Full-size">Full-size</option>
+                            </select>
+                        </div>
+                        
+
+                        <!-- Condition -->
+                        <div class="form-group">
+                            <label for="carCondition">Condition:</label>
+                            <select id="carCondition" name="carCondition" class="form-control" required>
+                                <option value="default">Select Condition</option>
+                                <option value="New">New</option>
+                                <option value="Used">Used</option>
+                                <option value="Certified Pre-Owned">Certified Pre-Owned</option>
+                            </select>
+                        </div>
+
+                        <!-- Mileage -->
+                        <div class="form-group">
+                            <label for="carMileage">Mileage (in km):</label>
+                            <input type="number" id="carMileage" name="carMileage" class="form-control" >
+                        </div>
+
+                        <!-- Price -->
+                        <div class="form-group">
+                            <label for="carPrice">Price (in $):</label>
+                            <input type="number" id="carPrice" name="carPrice" class="form-control" required>
+                        </div>
+                    
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="carDescription">Description:</label>
+                            <textarea id="carDescription" name="carDescription" class="form-control" required></textarea>
+                        </div>
+                        <label for="carPrincipalImage">Principal Image:</label>
+                        <input type="file" id="carPrincipalImage" name="carPrincipalImage" accept="image/*">
+                        
+                        <!-- Images -->
+                        <div class="form-group">
+                            <label for="carImages">Car Images:</label>
+                            <input type="file" id="carImages" name="carImages[]" class="form-control" multiple accept="image/*">
+                        </div>
+
+                        <!-- Video (optional) -->
+                        <div class="form-group">
+                            <label for="carVideo">Car Video (optional):</label>
+                            <input type="file" id="carVideo" name="carVideo" class="form-control" accept="video/*">
+                        </div>
+                        <button type="submit" id="submit-btn">Add Car</button>
+
+                        <!-- <button type="submit" id="submit-btn " class="btn btn-primary btn-block">Add Car</button> -->
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Car Listing with Pagination -->
+        <div class="col-md-8 mb-4">
+            <div id="admin-car-list" class="row"></div>
+            <div class="text-center mt-4">
+                <button id="prev-page" class="btn btn-secondary">Previous</button>
+                <button id="next-page" class="btn btn-secondary">Next</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Atlas Cars. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Firebase and JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script type="module" src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"></script>
+
+<script type="module" src="assets/js/admindash.js"></script> <!-- Separate JS for managing cars -->
+
+</body>
+</html>

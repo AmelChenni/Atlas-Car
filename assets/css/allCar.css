@@ -1,0 +1,80 @@
+.container {
+    margin: 20px auto;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-car {
+    margin-bottom: 20px;
+    flex: 0 0 48%; /* Make two cards per row */
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.badge-new {
+    color: #fff;
+    background-color: green;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.badge-used {
+    color: #fff;
+    background-color: red;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+#welcome-btn.model-search-btn {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#searchTitle {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
